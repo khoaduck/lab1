@@ -1,0 +1,39 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title th:text="${appName}">App Name</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+      }
+      nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #f26522;
+        font-weight: bold;
+      }
+      .message {
+        background: #fff3e0;
+        padding: 10px;
+        border-left: 5px solid #f26522;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a th:href="@{/home/index}" class="active">Trang chủ</a>
+      <a th:href="@{/home/about}">Giới thiệu</a>
+      <a th:href="@{/home/help}">Trợ giúp</a>
+    </nav>
+
+    <h1 th:text="${appName}">App Name</h1>
+    <p>Môn học: <b th:text="${subject}">Subject</b></p>
+    <p>Học kỳ: <b th:text="${semester}">Semester</b></p>
+    <p class="message" th:text="${message}">Message</p>
+
+    <h2>Trang chủ</h2>
+    <p>Đây là trang chủ của hệ thống quản lý sản phẩm.</p>
+  </body>
+</html>
